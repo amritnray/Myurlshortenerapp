@@ -25,7 +25,7 @@ SECRET_KEY = '%ks@ltr*b#sq+lb3f149-8^lb=31dqrxnd68@)=6&1)2w#p%@*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['amritapp.heroku.com']
 
 
 # Application definition
