@@ -44,11 +44,13 @@ def kirr_ridirect_view(request,shortcode=None,*args,**kwargs):
 class KirrCBView(View): #class based
 	def get(self,request,shortcode=None,*args,**kwargs):
 		qs = KirrURL.objects.filter(shortcode__iexact=shortcode)
+		print(qs)
 		if(qs.count() != 1 and not qs.exists()):
 			raise Http404
 		obj = qs.first()
 		print(ClickEvent.objects.create_event(obj))
 		if("http" in obj.url):
+			print(ob.url)
 			return HttpResponseRedirect(obj.url)
 		else:
 			obj.url="http://"+obj.url
