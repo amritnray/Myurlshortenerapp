@@ -42,7 +42,7 @@ class KirrURL(models.Model):
 	def __unicode__(self):
 		return str(self.url)
 	def get_short_url(self):
-		url_path='http://amritapp.herokuapp.com/'+"self.shortcode"
+		url_path='http://amritapp.herokuapp.com/'+self.shortcode
 		#url_path=reverse("scode",kwargs={'shortcode':self.shortcode},scheme='http')
 		return url_path
 
